@@ -33,7 +33,7 @@ let phone = 'iPhone XS Max';
 let yearBought = 2019;
 let stillWorks
 
-const sameh = {
+const sameh = { // You can use functions in objects to do a ton of stuff, but not arrow functions
     city: 'Boston',
     yearBorn: 1989,
     roomMates: ['Sanjeev', 'Ollie'],
@@ -50,7 +50,44 @@ const sameh = {
 }
 
 sameh.faveStreet();
-console.log(sameh)
+console.log(sameh);
+
+function printRoommates (array) {
+    array.forEach(friend => {
+        console.log(friend);
+    })
+};
+
+printRoommates(friends);
+printRoommates(sameh.roomMates); // You can pass it arrays inside objects as well.
+
+function printName (element) {
+    console.log(element);
+};
+
+friends.forEach(function(friend){
+    printName(friend);
+});
+
+
+// standard function
+
+function addNumbers (num1, num2) {
+    return num1 + num2;
+};
+
+// function expression
+
+const multiplyNumbers = function (num1, num2) {
+    return num1 * num2;
+};
+
+// arrow function
+
+const subtractNumbers = (num1, num2) => {
+    return num1 - num2;
+};
+
 
 
 

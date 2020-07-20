@@ -52,7 +52,7 @@ const sameh = { // You can use functions in objects to do a ton of stuff, but no
 sameh.faveStreet();
 console.log(sameh);
 
-function printRoommates (array) {
+function printRoommates (array) { // forEach is just a fancy way of iterating over an array, or even arrays inside objects
     array.forEach(friend => {
         console.log(friend);
     })
@@ -87,6 +87,33 @@ const multiplyNumbers = function (num1, num2) {
 const subtractNumbers = (num1, num2) => {
     return num1 - num2;
 };
+
+// DOM
+// Grabs the container class from the Div
+const container = document.querySelector('.container');
+
+console.log(container);
+
+// Creates an H2 then appends it below
+
+const headerTwo = document.createElement('h2');
+headerTwo.textContent = 'My First JS Review';
+
+
+
+container.appendChild(headerTwo);
+
+// add a class to the H2
+
+headerTwo.classList.add('subtitle', 'header-two'); // adds a class
+// headerTwo.setAttribute('class', 'header-two'); // This overrides the one right above it for whatever reason, will change any class inside
+
+// This should remove a class, not sure why it's not working
+
+headerTwo.classList.remove('header-Two');
+
+
+
 
 
 

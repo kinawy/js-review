@@ -73,3 +73,42 @@ headerTwo.classList.add('subtitle', 'header-two'); // adds a class
 headerTwo.classList.remove('header-Two');
 console.log(headerTwo);
 ```
+## More DOM Manipulation
+### Create new elements, append them, add event listener, used a for loop to go through the array and get the data
+
+```
+// make another element
+
+const headerThree = document.createElement('h2');
+
+headerThree.textContent = 'Friends';
+
+container.appendChild(headerThree); // Appends the new header
+
+console.log(headerThree);
+
+const list = document.createElement('ul');
+
+
+
+// iterate through the friends array
+// reference or grab each friend
+// create a li or list
+// add textContent to that li
+// append that to a ul or unordered list
+
+for (i =0; i < friends.length; i++) { // iterates over the array, then sets variables for the iterator and creating list items
+        let eachFriend = friends[i];
+        const listItem = document.createElement('li');
+        listItem.textContent = eachFriend;
+        list.appendChild(listItem); // appends the list items to the unordered list
+        
+    }
+    
+console.log(list);
+headerThree.addEventListener('click', function () {
+    container.appendChild(list); // appends the newly created ul and all the other parts to the container class div
+});```
+
+
+

@@ -121,6 +121,7 @@ headerTwo.addEventListener('click', function () { // will change the inner text 
 });
 
 // make another element
+
 const headerThree = document.createElement('h2');
 
 headerThree.textContent = 'Friends';
@@ -129,20 +130,29 @@ container.appendChild(headerThree); // Appends the new header
 
 console.log(headerThree);
 
-// iterate through the friends array
-// reference or grab each friend
-// create a li or list
-// add textContent to that li
-// append that to a ul or unordered list
-
 const list = document.createElement('ul');
 
 
+
+
+
+
+
+
+// iterate through the friends array
 for (i =0; i < friends.length; i++) { // iterates over the array, then sets variables for the iterator and creating list items
-        let eachFriend = friends[i];
-        const listItem = document.createElement('li');
-        listItem.textContent = eachFriend;
-        list.appendChild(listItem); // appends the list items to the unordered list
+        
+    // reference or grab each friend
+    let eachFriend = friends[i];
+
+    // create a li or list
+    const listItem = document.createElement('li');
+
+    // add textContent to that li
+    listItem.textContent = eachFriend;
+
+    // append that to a ul or unordered list
+    list.appendChild(listItem); // appends the list items to the unordered list
         
     }
     
@@ -150,18 +160,4 @@ console.log(list);
 headerThree.addEventListener('click', function () {
     container.appendChild(list); // appends the newly created ul and all the other parts to the container class div
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

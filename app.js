@@ -42,11 +42,15 @@ const sameh = {
         street1: 'Perthshire Road',
         street2: 'Barrows Street',
         street3: 'Adamson Street'
-    }
+    },
     faveStreet: function () {
-        this.streets.street4 = 'Rugg Road'
+        this.streets.street4 = 'Rugg Road';
+        console.log(this);
     }
 }
+
+sameh.faveStreet();
+console.log(sameh)
 
 
 

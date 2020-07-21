@@ -1,0 +1,14 @@
+body {
+    background-color: red;
+}
+
+.container {
+    background-color: aqua;
+    border: solid black 3px;
+    text-transform: uppercase;
+}
+
+span {
+    font-weight: bold;
+    font-size: large;
+}

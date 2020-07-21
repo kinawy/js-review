@@ -42,6 +42,10 @@ console.log(reverseStr('hello'));
 // }
 // console.log(luckySevens(62));
 // 
+
+// Write a function `luckySevens(max)` that returns an array of all numbers up
+// to max (inclusive) that are divisible by 7.
+
 function luckySevens(max) {
     // Empty array to store the numbers
     let luckyArray = []
@@ -58,35 +62,59 @@ function luckySevens(max) {
 
 console.log(luckySevens(52));
 
-function copyMachine(element, num) {
-    const result = [];
-    for (let i = 0; i < num; i++) {
-        result.push(element);
-    }
-    return result;
-}
-console.log(copyMachine('bread', 4))
+// Write a function `copyMachine(element, num)` that takes in an element and a number
+// it should return an array of length `num` that is filled with `element`.
 
 
-
-
-
-// function everyOtherWord (sentence) {
-//     let wordCount = 0;
-
-//     let arr = [];
-    
-//     let sentSplit = sentence.split(' ');
-//     console.log(sentSplit);
-
-//     for (let i = 0; i < sentSplit.length; i+2) {
-//         arr.push(sentSplit[i]);
-        
+// function copyMachine(element, num) {
+//     // Empty array to store the values
+//     const result = [];
+//     // Loop through the number, and push elements into the array
+//     for (let i = 0; i < num; i++) {
+//         result.push(element);
 //     }
-//     return arr;
+//     return result;
 // }
 
-// console.log(everyOtherWord('hello how are you doing on this lovely day?'));
+
+function copyMachine (element, number) {
+    let array2 = [];
+    // i can be either 1 or 0 here, doesnt matter
+    let i = 1;
+    // Since using while, while i is less than or equal to the number being passed, push the element into our new array
+    while (i <= number) {
+        array2.push(element);
+        i++;
+    }
+    return array2;
+}
+
+console.log(copyMachine('bread', 4));
+
+// Write a function `everyOtherWord(sentence)` that takes in a sentence and returns
+// an array containing every other word in that sentence.
+
+function everyOtherWord (sentence) {
+    
+    // an empty array to store every other word
+    let arr1 = [];
+    // Splits our sentence up by word into a new array
+    let sentSplit = sentence.split(' ');
+    // Loop through our split sentence
+    for (let i = 0; i < sentSplit.length; i ++) {
+        // Write a conditional saying if its not true that i has a remainder of zero when divided by 2, push that word being iterated on into our array
+        if (!(i % 2)) {
+            arr1.push(sentSplit[i]);
+        } 
+    }
+    // Return
+    return arr1;
+
+    
+    
+}
+
+console.log(everyOtherWord('hello how are you doing on this lovely day?'));
 
 
 

@@ -20,7 +20,7 @@ console.log(isInside(['taylor', 'rome', 'adam'], 'mom'));
 // Then I used the reverse method to reverse the array
 // Then I used the join method to rejoin all of the seperated characters inside of the array into a backwards word.
 function reverseStr (string) {
-    // this function just returns the string split with no space so it goes by character in an array with the split method, then using the reverse array method it reverses it, then rejoins with the join array method to be the reversed string.
+    // this function just returns the string split, into an array with the split method, with no space so it goes by character in an array with the split method, then using the reverse array method it reverses it, then rejoins with the join array method to be the reversed string.
         return string.split("").reverse().join("");
            
     
@@ -28,6 +28,7 @@ function reverseStr (string) {
 }
 
 console.log(reverseStr('hello'));
+console.log(reverseStr('General Assembly'));
 // What me and Martin got, I understand the following way more though
 // function luckySevens(max) {
 //     // Created an empty array to store the numbers.
@@ -114,21 +115,21 @@ console.log(copyMachine('bread', 4));
 
 function everyOtherWord (sentence) {
     
-    // Create an empty array
-    let array4 = []
+    
     // Split the sentence once again
     let sentSplit = sentence.split(' ');
 
     // Instead of using a for Loop, this one just uses the filter method to find the element and its index, if its index modulus 2 has a remainder of 0, push the element into my empty array. I'm not sure if i can do it with a regular function inside of this one, but I definitely think I can do the filter method outside of this function and get the same result, what i mean is all the research i did I could only figure it out while passing it an arrow function.
     let x = sentSplit.filter((element, index) => {
         if (index % 2 === 0) {
-            array4.push(element);
+            // return the element being passed and it will be in a new array created by the filter method, so all i have to do is return x below
+            return element;
         }
         
     })
-    // Return
+    // Return x
     
-    return array4;
+    return x;
 }
 
 
@@ -265,6 +266,7 @@ function evenCaps(sentence) {
 
 
 console.log(evenCaps("Tom got a small piece of pie"));
+
 
 
 

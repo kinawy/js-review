@@ -47,7 +47,7 @@ const subtractNumbers = (num1, num2) => {
 
 ## Dom Manipulation
 
-```
+```javascript
 // DOM
 // Grabs the container class from the Div
 const container = document.querySelector('.container');
@@ -76,7 +76,7 @@ console.log(headerTwo);
 ## More DOM Manipulation
 ### Create new elements, append them, add event listener, used a for loop to go through the array and get the data
 
-```
+```javascript
 // make another element
 
 const headerThree = document.createElement('h2');
@@ -108,8 +108,37 @@ for (i =0; i < friends.length; i++) { // iterates over the array, then sets vari
 console.log(list);
 headerThree.addEventListener('click', function () {
     container.appendChild(list); // appends the newly created ul and all the other parts to the container class div
-});```
+});
+```
+## I thought this was pretty Cool
 
+```javascript
+function everyOtherWord (sentence) {
+    
+    // an empty array to store every other word
+    let arr1 = [];
+    // Splits our sentence up by word into a new array
+    let sentSplit = sentence.split(' ');
+
+    // Loop through our split sentence
+    for (let i = 0; i < sentSplit.length; i ++) {
+        // Write a conditional saying if its not true that i has a remainder of zero when divided by 2, push that word being iterated on into our array
+        if (!(i % 2)) {
+            arr1.push(sentSplit[i]);
+        } 
+    }
+    // Return
+    return arr1;
+
+    
+    
+}
+
+console.log(everyOtherWord('hello how are you doing on this lovely day?'));
+```
+
+1. The if statement above, using the exclamation point outside of another set of parentheses, actually checks if its true or false, instead of whether there is a remainder.
+2. I literally just realized while helping Nick on his deliverable that you can use Array.filter() on this question as well.
 
 
 

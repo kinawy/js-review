@@ -196,6 +196,49 @@ function arraySubString (words, string) {
 
 console.log(arraySubString(['this', 'tis', 'not'], 'is'))
 
+// Write a function evenCaps(sentence) that takes in a sentence as an
+// argument and returns the same string with each even index being
+// capitalized. Index 0 counts as even.
+//
+// Examples:
+//
+// evenCaps("Tom got a small piece of pie")
+// => "ToM GoT A SmAlL PiEcE Of pIe"
+// evenCaps("the book is in front of the table")
+// => "ThE BoOk iS In fRoNt oF ThE TaBlE"
+
+function evenCaps(sentence) {
+
+
+    // Create a variable using split that splits the sentence up by character
+    let splitSentence = sentence.split('');
+
+    // Create an array to store our updated words
+    let wordArray = [];
+
+    // Loop through our split up sentence BY CHARACTER using .length
+    for (let i = 0; i < splitSentence.length; i ++) {
+
+        //Create a condition that checks the remainder, if there is a remainder, push it into our array and make it uppercase, if there is not a remainder, push it in, but dont make it uppercase.
+        if (!(i % 2)) {
+            wordArray.push(splitSentence[i].toUpperCase());
+        } else {
+            wordArray.push(splitSentence[i]);
+        }
+    }
+    // Create a variable that rejoins our array joined back together
+    let wordArrayJoined = wordArray.join('');
+
+    return wordArrayJoined;
+
+}
+
+
+
+
+
+console.log(evenCaps("Tom got a small piece of pie"));
+
 
 
 

@@ -157,7 +157,69 @@ for (i =0; i < friends.length; i++) { // iterates over the array, then sets vari
     }
     
 console.log(list);
+
+// adds an event listener to headerThree which appends the list to it
 headerThree.addEventListener('click', function () {
     container.appendChild(list); // appends the newly created ul and all the other parts to the container class div
 });
+
+// Problem Solving
+
+// What do I start with.
+// What do I hope to end up with.
+
+// Understand the problem.
+// Understand where your issues are starting, and what you're looking at.
+
+// Break it down into more manageable problems.
+
+// - [ ] Do I understand what the prompt is asking?
+// - [ ] Am I able to break the problem down?
+// - [ ] What is my strategy for solving the problem?
+// - [ ] Do I understand what my code is doing?
+// - [ ] Am I able to foresee any edge cases?
+// - [ ] Am I able to track the order of the code that is being executed?
+// - [ ] Am I able to track the values of the variables?
+// - [ ] Am I able to walk through my code line by line with an example?
+// - [ ] Do I have a working solution?
+
+// FizzBuzz
+
+// Write a function that does the following:
+    // Takes in an array.
+    // Check each number in the array.
+    // Check if each number is divisible, using the modulus operator, by 5 and 3 its equal to === FizzBuzz
+    // If the number is divisible by 3 its equal to === Fizz
+    // If the number is divisible by 5 its equal to === Buzz
+
+    // For Example:
+    // [3, 5, 15, 20, 9, 7]
+    // This would ouput ['Fizz', 'Buzz', 'FizzBuzz', 'Fizz']
+
+    // Empty array to store the string.
+    let fizzArr = [];
+
+    // A function that takes an array of numbers, using array as a parameter or placeholder.
+    function fizzBuzz (array) {
+        
+        // Iterate through the array passed to it
+        for (let i = 0; i < array.length; i ++) {
+
+            // Assign a variable to each number being iterated trough in the array
+            let num = array[i];
+
+            // Give conditionals saying if the number is divisible by x, push this string into the empty array.
+            if (num % 3 === 0 && num % 5 === 0) {
+                fizzArr.push('FizzBuzz');
+            } else if (num % 5 === 0) {
+                fizzArr.push('Buzz')
+            } else if (num % 3 === 0) {
+                fizzArr.push('Fizz')
+            } else {
+                fizzArr.push(num);
+            }
+        }  return fizzArr;
+    }
+
+    console.log(fizzBuzz([3, 6, 15, 18, 215, 213, 211]));
 

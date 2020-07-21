@@ -184,13 +184,21 @@ console.log(wordYeller(words));
 // => [true, false, false, true]
 
 function arraySubString (words, string) {
+
+    // Created a new variable to store our substring in
     let newSubArray = [];
 
-    words.forEach(element => {
+    // using a forEach loop that we passed a function we check the characters of the words array, and created a variable to see if our characters include the second parameter, our string
+
+    words.forEach(function (element) {
         let subFound = element.includes(string);
+
+        //If .includes carries the string, it pushes the return which is either true or false, into our substring array
 
         newSubArray.push(subFound);
     })
+
+    // return
     return newSubArray;
 }
 

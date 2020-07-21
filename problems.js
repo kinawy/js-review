@@ -1,27 +1,16 @@
 // Write a function that checks if an element is inside of an array
 
-// function isInside (array, ele) {
-//     for (let i = 0; i <= array.length; i ++) {
-//         if (array.indexOf(i) == ele) {
-//             return true;
-//         } else if (array.indexOf(i) != ele) {
-//             return false;
-//         }
-//     }
-// }
-
 function isInside (array, ele) {
-    for (let i = 0; i <= array.length; i ++) {
-        if (array.indexOf(i) == ele) {
-            return true;
-        } else if (array.indexOf(i) != ele) {
+    let indexArray = array.indexOf(ele);
+    if (indexArray != -1){
+        return true;
+        } else {
             return false;
         }
-    }
+     
 }
 
-
-console.log(isInside(['taylor', 'rome', 'adam'], 'rome'));
+console.log(isInside(['taylor', 'rome', 'adam'], 'mom'));
 
 
 // Write a function that reverses string
@@ -40,18 +29,22 @@ console.log(reverseStr('hello'));
 
 
 
-function everyOtherWord (sentence) {
-    const arr = [];
-    let sentSplit = sentence.split(' ');
-    console.log(sentSplit);
-    for (let i = 0; i < sentSplit.length; i+2) {
-        arr.push(sentSplit[i]);
-        
-    }
-    return arr;
-}
+// function everyOtherWord (sentence) {
+//     let wordCount = 0;
 
-console.log(everyOtherWord('hello how are you doing on this lovely day?'));
+//     let arr = [];
+    
+//     let sentSplit = sentence.split(' ');
+//     console.log(sentSplit);
+
+//     for (let i = 0; i < sentSplit.length; i+2) {
+//         arr.push(sentSplit[i]);
+        
+//     }
+//     return arr;
+// }
+
+// console.log(everyOtherWord('hello how are you doing on this lovely day?'));
 
 function luckySevens(max) {
     const array = [];

@@ -147,7 +147,7 @@ function wordYeller (sentence) {
         let wordLength = word.length - 1;
         // Creating a variable that stores the last character for us
         let lastCharacter = word[wordLength];
-        console.log(lastCharacter);
+        
         
         // Write a condition that checks against applicable punctuation, if the last character doesnt equal it, it pushes it in to the new array, otherwise if it doesn't it pushes it in with the exclamation point
         if (lastCharacter === '!' || lastCharacter === '.' || lastCharacter === ',' || lastCharacter === '?' || lastCharacter === ':') {

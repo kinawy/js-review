@@ -129,16 +129,38 @@ function everyOtherWord (sentence) {
     }
     // Return
     return arr1;
-
-    
-    
-}
+    }
 
 console.log(everyOtherWord('hello how are you doing on this lovely day?'));
 ```
 
 1. The if statement above, using the exclamation point outside of another set of parentheses, actually checks if its true or false, instead of whether there is a remainder.
 2. I literally just realized while helping Nick on his deliverable that you can use Array.filter() on this question as well.
+3. Just kidding I figured it out before I went to bed, using filter, I put a small explanation in this code snippet
+```javascript
+function everyOtherWord (sentence) {
+    
+    // Create an empty array
+    let array4 = []
+    // Split the sentence once again
+    let sentSplit = sentence.split(' ');
+
+    // Instead of using a for Loop, this one just uses the filter method to find the element and its index, if its index modulus 2 has a remainder of 0, push the element into my empty array. I'm not sure if i can do it with a regular function inside of this one, but I definitely think I can do the filter method outside of this function and get the same result, what i mean is all the research i did I could only figure it out while passing it an arrow function.
+    let x = sentSplit.filter((element, index) => {
+        if (index % 2 === 0) {
+            array4.push(element);
+        }
+        
+    })
+    // Return
+    
+    return array4;
+}
+
+
+
+console.log(everyOtherWord('hello how are you doing on this lovely day?'));
+```
 
 
 

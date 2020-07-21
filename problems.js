@@ -94,25 +94,44 @@ console.log(copyMachine('bread', 4));
 // Write a function `everyOtherWord(sentence)` that takes in a sentence and returns
 // an array containing every other word in that sentence.
 
+// function everyOtherWord (sentence) {
+    
+//     // an empty array to store every other word
+//     let arr1 = [];
+//     // Splits our sentence up by word into a new array
+//     let sentSplit = sentence.split(' ');
+//     // Loop through our split sentence
+//     for (let i = 0; i < sentSplit.length; i ++) {
+//         // Write a conditional saying if its not true that i has a remainder of zero when divided by 2, push that word being iterated on into our array
+//         if (!(i % 2)) {
+//             arr1.push(sentSplit[i]);
+//         } 
+//     }
+//     // Return
+//     return arr1;
+
+// }
+
 function everyOtherWord (sentence) {
     
-    // an empty array to store every other word
-    let arr1 = [];
-    // Splits our sentence up by word into a new array
+    // Create an empty array
+    let array4 = []
+    // Split the sentence once again
     let sentSplit = sentence.split(' ');
-    // Loop through our split sentence
-    for (let i = 0; i < sentSplit.length; i ++) {
-        // Write a conditional saying if its not true that i has a remainder of zero when divided by 2, push that word being iterated on into our array
-        if (!(i % 2)) {
-            arr1.push(sentSplit[i]);
-        } 
-    }
-    // Return
-    return arr1;
 
+    // Instead of using a for Loop, this one just uses the filter method to find the element and its index, if its index modulus 2 has a remainder of 0, push the element into my empty array. I'm not sure if i can do it with a regular function inside of this one, but I definitely think I can do the filter method outside of this function and get the same result, what i mean is all the research i did I could only figure it out while passing it an arrow function.
+    let x = sentSplit.filter((element, index) => {
+        if (index % 2 === 0) {
+            array4.push(element);
+        }
+        
+    })
+    // Return
     
-    
+    return array4;
 }
+
+
 
 console.log(everyOtherWord('hello how are you doing on this lovely day?'));
 

@@ -116,6 +116,88 @@ function everyOtherWord (sentence) {
 
 console.log(everyOtherWord('hello how are you doing on this lovely day?'));
 
+// Write a function `wordYeller(sentence)` that takes in a sentence string as
+// input. It should return the sentence where every word has an exclamation
+// point behind it, except words that already have punctuation. Punctuation
+// marks are ". , ! ? ; :"
+//
+// Example 1
+// let sent = "Stop it now! Please, wont you stop?";
+// let yelledWords = wordYeller(sent);
+// yelledWords === "Stop! it! now! Please, wont! you! stop?"; // => true
+//
+// Example 2
+// let words = "Go to the store and grab the following: milk, bread, run, and cake";
+// wordYeller(words) === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
+
+let words = "Go to the store and grab the following: milk, bread, run, and cake";
+
+function wordYeller (sentence) {
+    // First split the sentence into an array of words, we can create a variable for this.
+    let splitSentence = sentence.split(' ');
+    // Console.log
+    console.log(splitSentence);
+    // Create an empty array to store our new sentence in with the new punctuation
+    let newSentenceArray1 = [];
+
+    // Using for each we loop through our array created by split sentence
+    splitSentence.forEach(function (word) {
+
+        // Creating a variable that subtracts 1 from our word length, providing us with the last character of the word
+        let wordLength = word.length - 1;
+        // Creating a variable that stores the last character for us
+        let lastCharacter = word[wordLength];
+        console.log(lastCharacter);
+        
+        // Write a condition that checks against applicable punctuation, if the last character doesnt equal it, it pushes it in to the new array, otherwise if it doesn't it pushes it in with the exclamation point
+        if (lastCharacter === '!' || lastCharacter === '.' || lastCharacter === ',' || lastCharacter === '?' || lastCharacter === ':') {
+            newSentenceArray1.push(word)
+        } else {
+            
+            let newWord = word + '!';
+
+            newSentenceArray1.push(newWord);
+        }
+
+        })
+        
+        // Create a variable which rejoins our split string after the condition has been met
+
+        let newSentence = newSentenceArray1.join(' ');
+
+        return newSentence;
+}
+
+console.log(wordYeller(words));
+
+
+// Write a function `arraySubstring(words, str)` that takes in an array of
+// strings and a string as arguments and returns an array where each element is
+// replaced with true if the string is a substring of the element and false if
+// it is not.
+//
+// Examples:
+//
+// arraySubstring(["hello", "history", "helix", "hellos"],"hel")
+// => [true, false, true, true]
+// arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
+// => [true, false, false, true]
+
+function arraySubString (words, string) {
+    let newSubArray = [];
+
+    words.forEach(element => {
+        let subFound = element.includes(string);
+
+        newSubArray.push(subFound);
+    })
+    return newSubArray;
+}
+
+console.log(arraySubString(['this', 'tis', 'not'], 'is'))
+
+
+
 
 
 
